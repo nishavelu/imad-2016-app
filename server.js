@@ -4,6 +4,24 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var content ={
+    title: 'Article one | Nisha',
+    heading: 'Article one',
+    date: 'sep 5, 2016' ,
+    content:   
+     `  <p>
+        This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is thecontent formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
+        
+    </p>
+     <p>
+        This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
+        
+    </p>
+    
+     <p>
+        This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
+    </p> `
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
