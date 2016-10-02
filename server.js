@@ -50,6 +50,8 @@ var htmltemplate=
 <div>
     ${date}
 </div>
+ <p>
+       ${content}
 <div class="container">
     
 </div>
