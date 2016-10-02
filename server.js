@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles={
 
-    articleone: {
+    'article-one': {
     title: 'Article one | Nisha',
     heading: 'Article one',
     date: 'sep 5, 2016' ,
@@ -25,7 +25,7 @@ var articles={
         This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
     </p> `
 },
-articletwo: {
+'article-two': {
     title: 'Articletwo| Nisha',
     heading:'Article Two',
     date:'sep 5, 2016' ,
@@ -35,7 +35,7 @@ articletwo: {
   </p>  `  
 },
 
- articlethree:{
+'article-three':{
     title: 'Articlethree | Nisha' ,
     heading:'Article Three' ,
     date:'sep 5,2016' ,
@@ -96,8 +96,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-   res.send(createtemplate(articleone));
+app.get('/articlename', function (req, res) {
+  var artcclename=req.params.articlename;
+   res.send(createtemplate(articles(articleone)));
 });
 
 app.get('/article-two', function (req, res) {
