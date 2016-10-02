@@ -4,7 +4,10 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articleone ={
+
+var articles={
+
+    articleone: {
     title: 'Article one | Nisha',
     heading: 'Article one',
     date: 'sep 5, 2016' ,
@@ -21,7 +24,28 @@ var articleone ={
      <p>
         This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
     </p> `
+},
+articletwo: {
+    title: 'Articletwo| Nisha',
+    heading:'Article Two',
+    date:'sep 5, 2016' ,
+    content:
+    ` </p>
+    This is the content for my second article.
+  </p>  `  
+},
+
+ articlethree:{
+    title: 'Articlethree | Nisha' ,
+    heading:'Article Three' ,
+    date:'sep 5,2016' ,
+    content:
+    ` <p>
+    This is my third article.
+    </p> `
+} 
 };
+
 function createtemplate(data){
     var title=data.title;
     var heading=data.heading;
