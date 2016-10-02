@@ -30,7 +30,7 @@ var articles={
     heading:'Article Two',
     date:'sep 10, 2016' ,
     content:
-    ` </p>
+    ` <p>
     This is the content for my second article.
   </p>  `  
 },
@@ -79,10 +79,8 @@ var htmltemplate=`
 <div>
     ${date}
 </div>
- <p>
-       ${content}
 <div class="container">
-    
+         ${content}
 </div>
 </div>
 </body>
