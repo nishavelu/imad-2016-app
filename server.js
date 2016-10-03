@@ -13,7 +13,7 @@ var articles={
     date: 'sep 7, 2016' ,
     content:   
      `  <p>
-        This is the content formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is thecontent formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
+        This is the content for my first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is thecontent formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
         
     </p>
      <p>
@@ -76,7 +76,7 @@ var htmltemplate=`
 <div>
     ${date}
 </div>
-<div class="container">
+<div>
          ${content}
 </div>
 </div>
