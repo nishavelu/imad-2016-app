@@ -36,7 +36,7 @@ var articles={
 },
 
 'article-three':{
-    title: 'Articlethree | Nisha' ,
+    title: 'Article Three | Nisha' ,
     heading:'Article Three' ,
     date:'sep 15,2016' ,
     content:
