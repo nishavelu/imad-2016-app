@@ -1,10 +1,17 @@
 console.log('Loaded!');
+
 var element = document.getElementById('main-text');
 element.innerHTML='Hello I am Nisha. This is my new project.';
+
 var img=document.getElementById('madi');
+
 img.onclick= function()
 {img.style.marginLeft = '100px';};
-/*var img=document.getelementbyId('madi');
+
+
+
+
+/*var img=document.getelementbyId('img');
 var marginLeft=0;
 function moveRight() {
     marginLeft=marginLeft+1;
