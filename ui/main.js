@@ -4,7 +4,7 @@ console.log('Loaded!');
 //element.innerHTML='Hello I am Nisha. This is my new project.';
 
 var img=document.getElementById('madi');
-img.onclick= function()
+img.onclick = function()
 {
     img.style.marginLeft = '50px';
     
