@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 //var element = document.getElementById('main-text');
-//element.innerHTML='Hello I am Nisha. This is my new project.';
+//element.innerHTML='this is a comment.';
 
 /*var img=document.getElementById('madi');
 img.onclick = function()
