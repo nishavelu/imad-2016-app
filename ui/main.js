@@ -1,5 +1,4 @@
-/*
-IMAGE POSITION SHIFT
+/*IMAGE POSITION SHIFT
 console.log('Loaded!');
 
 //var element = document.getElementById('main-text');
