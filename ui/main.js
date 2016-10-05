@@ -1,4 +1,6 @@
-/*console.log('Loaded!');
+/*
+IMAGE POSITION SHIFT
+console.log('Loaded!');
 
 //var element = document.getElementById('main-text');
 //element.innerHTML='this is a comment.';
