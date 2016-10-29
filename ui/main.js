@@ -12,7 +12,7 @@ span.innerHTML=counter.toString();
 
 };
 
-var nameInput = document.getElementById('name');
+var nameInput = document.getElementById("name");
 var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 
