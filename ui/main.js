@@ -29,7 +29,7 @@ request.onreadystatechange = function() {
   }
 };
 //Make the request
-request.open('GET', 'http://nishavelu.imad.hasura-app.io/counter', true);
+request.open('GET', 'http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
