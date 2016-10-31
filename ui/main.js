@@ -27,7 +27,7 @@ request.onreadystatechange = function() {
           span.innerHTML=counter.toString();
       }
   }
-};
+}
 //Make the request
 request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
