@@ -24,7 +24,7 @@ request.onreadystatechange = function() {
       
           var counter = request.responeText;
           var span = document.getElementById('count');
-          span.innerHTML = count.toString();
+          span.innerHTML = counter.toString();
       }
   }
 };
