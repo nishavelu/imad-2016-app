@@ -96,8 +96,7 @@ app.get('/counter', function (req, res)
 {
     counter = counter + 1;
     res.send(counter.toString());
-}
-);
+});
 
 var names=[];
 app.get('/submit-name', function (req, res) {
