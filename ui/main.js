@@ -11,10 +11,14 @@ span.innerHTML=counter.toString();
 
 
 var button =document.getElementById('counter');
-
+var counter = 0;
 button.onclick = function() {
+    counter = counter + 1;
+var span=document.getElementById('count');
+span.innerHTML=counter.toString();
+};
 
-var request = new XMLHttpRequest();
+/*var request = new XMLHttpRequest();
 
 //Capture the response and store it in a variable
 request.onreadystatechange = function() {
@@ -33,7 +37,7 @@ request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
-
+*/
 
 
 
