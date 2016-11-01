@@ -53,8 +53,8 @@ submit.onclick = function() {
            list += '<li>' + names[i] + '</li>';
             
          }
-	    var p = document.getElementById('namelist');
-        p.innerHTML = list;
+	    var ul = document.getElementById('namelist');
+        ul.innerHTML = list;
          }
    }        
   
