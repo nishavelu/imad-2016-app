@@ -10,23 +10,24 @@ span.innerHTML=counter.toString();
 
 
 
-var button =document.getElementById('counter');
-
-button.onclick = function() {
+var button=document.getElementById("counter");
+button.onclick = function(){
 var request = new XMLHttpRequest();
-
-//Capture the response and store it in a variable
-request.onreadystatechange = function() {
-  if (request.readyState === XMLHttpRequest.DONE) {
-    
-      if(request.status === 200) {
-      
-          var counter = request.responeText;
-          var span=document.getElementById('count');
-          span.innerHTML = counter.toString();
-      }
+    //create a request
+ request.onreadystatechange= function(){
+ if (request.readyState === XMLHttpRequest.DONE)
+  {
+      // take some action
+    if (request.status===200)
+       { 
+           //alert("ok");
+        var counter=request.responseText;
+        var span=document.getElementById("count");
+        span.innerHTML=counter.toString();
+       }
   }
 };
+
 //Make the request
 request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
