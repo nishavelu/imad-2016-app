@@ -35,7 +35,7 @@ request.send(null);
 
 var submit =document.getElementById('submit-btn');
 
-Submit.onclick = function() {
+submit.onclick = function() {
   
   var request = new XMLHttpRequest();
 // capture the response and store in a variable
