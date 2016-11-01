@@ -33,7 +33,7 @@ request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
-var submit =document.getElementById("submit-btn");
+var submit =document.getElementById('submit-btn');
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
