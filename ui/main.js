@@ -61,7 +61,7 @@ submit.onclick = function() {
   
 };
     var nameInput=document.getElementById('name');
-    var name1=nameInput.value;
+    var name=nameInput.value;
     
     request.open('GET', 'http://nishavelu.imad.hasura-app.io/submit-name?name=' + name ,true);
     request.send(null);
