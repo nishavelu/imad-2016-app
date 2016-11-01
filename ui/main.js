@@ -12,6 +12,7 @@ span.innerHTML=counter.toString();
 
 var button =document.getElementById('counter');
 
+button.onclick = function() {
 var request = new XMLHttpRequest();
 
 //Capture the response and store it in a variable
@@ -29,7 +30,7 @@ request.onreadystatechange = function() {
 //Make the request
 request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
-
+};
 
 
 
