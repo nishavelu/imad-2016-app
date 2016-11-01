@@ -33,7 +33,6 @@ request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
-
 var submit =document.getElementById('submit-btn');
 submit.onclick = function() {
   
@@ -51,19 +50,19 @@ submit.onclick = function() {
 	    var list='';
         for (var i=0;i<names.length;i++)
         {
-                     list += '<li>' + names[i] + '</li>';
-            
+          // list += '<li>' + names[i] + '</li>';
+            list +=  names[i] +'<br>';
          }
-	    var ul = document.getElementById('namelist');
-        ul.innerHTML = list;
+	    var p = document.getElementById('namelist');
+        p.innerHTML = list;
          }
    }        
   
 };
     var nameInput=document.getElementById('name');
-    var name=nameInput.value;
+    var name1=nameInput.value;
     
-    request.open('GET','http://nishavelu.imad.hasura-app.io/submit-name?name=' + name ,true);
+    request.open('GET', 'http://nishavelu.imad.hasura-app.io/submit-name?name=' + name1 ,true);
     request.send(null);
  }; 
  
