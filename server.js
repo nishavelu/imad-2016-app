@@ -12,21 +12,6 @@ var config ={
     password: process.env.DB_PASSWORD
 };
 
-var pool = new pg.Pool(config);
-
-app.get("/test-db", function (req,res){
-    // make a select request
-    // return a response with the result
-    
-    pool.query("SELECT * FROM article",function (err, result){
-       if (err){
-           res.status(500).send (err.toString());
-          } else {
-              res.send(JSON.stringify(result.rows));
-          }
-          
-      });
-});
 
 var articles={
 
@@ -113,6 +98,23 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+var pool = new pg.Pool(config);
+
+app.get("/test-db", function (req,res){
+    // make a select request
+    // return a response with the result
+    
+    pool.query("SELECT * FROM test",function (err, result){
+       if (err){
+           res.status(500).send (err.toString());
+          } else {
+              res.send(JSON.stringify(result));
+          }
+          
+      });
+});
+
 
 var counter=0;
 app.get('/counter', function (req, res)
