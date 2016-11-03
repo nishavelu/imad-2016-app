@@ -59,38 +59,40 @@ var articles={
 } 
 };
 
-function createtemplate(data){
-    var title=data.title;
-    var heading=data.heading;
-    var date=data.date;
-    var content=data.content;
-
-var htmltemplate=`
-
-<html>
- <head>
-  <title>
-  ${title}
-  </title>
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/ui/style.css" rel="stylesheet" />
- </head>
-
-<body>
-     <div class="container">
+function createTemplate (data) {
+     var title= data.title;
+     var date=data.date;
+     var heading=data.heading;
+     var content=data.content;
+     
+var HTMLTemplate =`
+    <html>
+    <head>
+    <title>
+       ${title}
+      </title>
+      <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="/ui/style.css" rel="stylesheet" />
+      
+    </head>
+    
+    <body>
+        <div class="container" style="border:none;">
+     
        <div>
-        <a href="/">Home</a>
-       </div>
-    <hr/>
-     <h3>
-    ${heading}
-</h3>
-<div>
-    ${date}
-</div>
-<div>
-         ${content}
+        <div>
+        
+        <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
+        <a href="/" style="color:maroon;"> Home </a>
+        <hr>
+        </div>
+        <div>
+        ${date.toDateString()}
+        </div>
+        <hr>
+        <div>
+        ${content}
+
 </div>
 </div>
 </body>
