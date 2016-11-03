@@ -106,11 +106,11 @@ app.get('/', function (req, res) {
 
 var pool = new pg.Pool(config);
 
-app.get("/test-db", function (req,res){
+app.get('/test-db', function (req,res){
     // make a select request
     // return a response with the result
     
-    pool.query("SELECT * FROM article",function (err, result){
+    pool.query('SELECT * FROM article',function (err, result){
        if (err){
            res.status(500).send (err.toString());
           } else {
