@@ -23,7 +23,7 @@ var articles={
         
     title: 'Article one | Nisha',
     heading: 'Article one',
-    date: 'oct 01, 2016' ,
+    date: 'Aug 01, 2016' ,
     content:   
      `  <p>
         This is the content for my first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. This is thecontent formy first Oracle. This is the content formy first Oracle. This is the content formy first Oracle. 
