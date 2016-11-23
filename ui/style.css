@@ -20,12 +20,9 @@ body {
     height: 200px;
 }
 
-.h{
-	text-align: center;
-	color: #fff;
-	font-size: 24px;
-	cursor: pointer;
-	-webkit-text-color: #fff;
+.w3-content {
+    max-width: 1500px;
+    margin: auto;
 }
 
 
@@ -38,6 +35,16 @@ body {
            
         }
      
+            #i-nav{
+                display:block;
+                position:fixed;
+                top:17px;
+                right:20px;
+                width: 30px;
+                height: 44px;
+                background: none;
+            }
+		
 
   .container {
          max-width: 800px;
