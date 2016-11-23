@@ -20,6 +20,15 @@ body {
     height: 200px;
 }
 
+	.w3-xlarge {
+					font-size: 31px !important;
+					}
+
+        *{
+            padding:0;
+            margin:0;
+        }
+
         .alogo{
             float:left;
             color:#38ACEC;
