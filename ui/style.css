@@ -25,6 +25,12 @@ body {
     margin: auto;
 }
 
+.g {
+   padding:2px;
+    background-color:#FFFFFF;
+    height:1500px;
+}
+
 
         .alogo{
             float:left;
