@@ -20,6 +20,13 @@ body {
     height: 200px;
 }
 
+.h{
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	-webkit-text-color: #fff;
+}
 
 
         .alogo{
