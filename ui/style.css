@@ -20,6 +20,16 @@ body {
     height: 200px;
 }
 
+        .alogo{
+            float:left;
+            color:#38ACEC;
+            line-height:80px;
+            margin-left: 40px;;
+            font-family:sans-serif;
+           
+        }
+        
+
   .container {
          max-width: 800px;
     margin: 0 auto;
