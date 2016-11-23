@@ -31,6 +31,12 @@ body {
            
         }
      
+     header{
+                float:left;
+                width:100%;
+                height:80px;
+                background:#666;
+            }
             #i-nav{
                 display:block;
                 position:fixed;
