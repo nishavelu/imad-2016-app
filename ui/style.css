@@ -45,6 +45,14 @@ body {
                 background: none;
             }
 		
+                #i-nav{	
+                    display:block; 
+                }
+                .v{
+                    width:100%;
+                    text-align:center;
+                    margin:0;
+                }
 
   .container {
          max-width: 800px;
