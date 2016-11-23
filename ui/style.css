@@ -31,16 +31,6 @@ body {
            
         }
      
-             li a{
-            display:block;
-            float:left;
-            height:50px;
-            line-height:50px ;
-            color:black;
-            padding: 0 20px;
-            color:white;
-        }
-   
 
   .container {
          max-width: 800px;
