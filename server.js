@@ -15,6 +15,12 @@ password: process.env.DB_PASSWORD
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
+app.use(session({ 
+    secret: 'anythingRandom',
+    cookie :{maxAge : 1000*60 *60* 24 *30}
+    
+    }));
 
 
 var articles={
