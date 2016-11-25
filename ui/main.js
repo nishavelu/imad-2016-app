@@ -33,6 +33,35 @@ request.open('GET','http://nishavelu.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 
+var login = document.getElementById('login_btn');
+login.onclick = function () {
+  var request = new XMLHttpRequest();
+  //capture the response and store it in a variable
+  request.onreadystatechange =function () {
+    if(request.readyState === XMLHttpRequest.DONE){
+      if(request.status === 200){
+          alert('Login successful');
+      }
+      else if (request.status ===403){
+          alert('username/password is incorrect');
+      }
+      else if (request.status ===500){
+          alert('Something went wrong with the server');
+      }
+    }
+  };
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  console.log(username);
+  console.log(password);
+   //make the request
+    request.open('POST','http://nishavelu.imad.hasura-app.io/login');
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+      
+};
+
+
 var submit =document.getElementById('submit_btn');
 
 submit.onclick = function(){
