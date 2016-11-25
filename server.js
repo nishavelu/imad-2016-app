@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
-var path = require('path');
+var Pool = require('pg').Pool;
+//var path = require('path');
 var pg =require('pg');
 var crypto =require('crypto');
 var bodyParser = require('body-parser');
@@ -122,7 +123,7 @@ app.get('/register.html', function (req, res) {
 
 
 
-var pool = new pg.Pool(config);
+//var pool = new pg.Pool(config);
 
 function hash(input,salt){
     //create a hash 
