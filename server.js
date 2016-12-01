@@ -108,6 +108,9 @@ return HTMLTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/registration.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'registration.html'));
+});
 
 
 function hash(input,salt){
@@ -238,6 +241,8 @@ app.get('/counter', function (req, res)
     counter = counter + 1;
     res.send(counter.toString());
 });
+
+
 
 var names=[];
 app.get('/submit-name', function (req, res) {
