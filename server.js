@@ -110,6 +110,107 @@ app.get('/', function (req, res) {
 });
 
 
+function hash(input,salt){
+    //create a hash 
+    var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
+}
+
+app.get('/hash/:input',function(req,res){
+    var hashedString = hash(req.params.input,'this-is-some-random-string');
+    res.send(hashedString);
+});
+
+var pool= new Pool(config);
+//register user start
+app.post('/register-user',function(req,res){
+ var uname = req.body.uname;
+ var passwd =req.body.passwd;
+ var salt = crypto.randomBytes(128).toString('hex');
+ var dbString = hash(passwd,salt);
+ pool.query('INSERT INTO user (username,password) VALUES ($1,$2)',[uname,dbString],function(err,result){
+  if(err){
+    res.status(500).send(err.toString());
+  }
+  else{
+    res.status(200).send('User created successfully'+uname);
+  }
+ });
+});
+//register user end
+
+//create user start
+//  app.post('/create-user',function(req,res){
+//     //username ,password
+//     //JSON request
+//     console.log('inside create user');
+//     var newUsername = req.body.newUsername; //Request body req.body
+//     var newPassword = req.body.newPassword;
+//     var salt = crypto.randomBytes(128).toString('hex');
+//     var dbString = hash(newPassword,salt);
+//     pool.query('INSERT INTO "users" (username,password) VALUES ($1,$2)',[newUsername,dbString],function(err,result){
+//       if(err){
+//             console.log("inside 500");
+//             res.status(500).send(err.toString());
+          
+//       } 
+//       else{
+//           res.status(200).send('User successfully created'+username);
+//       }
+//     });
+// });
+
+//create user end
+
+app.post('/login',function(req,res){
+    var username = req.body.username; //Request body req.body
+    var password = req.body.password;
+    pool.query('SELECT * FROM USER WHERE username = $1 ' ,[username],function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      } 
+      else {
+          if(result.rows.length ===0){
+              res.status(403).send('Username/password is invalid');        
+      }else{
+        //match the password
+          var dbString =result.rows[0].password;
+          var salt = dbString.split('$')[2];
+          var hashedPassword = hash(password,salt);
+          if(hashedPassword ===dbString){
+              //set the session
+              req.session.auth ={userId:result.rows[0].id};
+            res.send('Logged in ');
+            
+          }else
+          {
+           res.status(403).send('Username/password is invalid');        
+          }
+      }
+          
+      }
+    });
+});
+
+//check login endpoint starts
+    app.get('/check-login',function(req,res){
+       if(req.session && req.session.auth && req.session.auth.userId) {
+           res.send("you are logged in "+req.session.auth.userId.toString());
+       }
+       else{
+           res.send("You are not logged in ");
+       }
+    });
+
+
+//check login endpoint ends
+
+//logout endpoint starts
+    app.get('/logout',function(req,res){
+       delete  req.session.auth;
+       res.send("you are logged out");
+    });
+    
 
 
 
