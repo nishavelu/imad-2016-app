@@ -214,7 +214,7 @@ app.post('/login',function(req,res){
 
 
 
-var pool = new pg.Pool(config);
+//var pool = new pg.Pool(config);
 
 app.get('/test-db', function (req,res){
     // make a select request
