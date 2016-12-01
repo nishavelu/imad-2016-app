@@ -18,7 +18,7 @@ register.onclick = function () {
   console.log(newUsername);
   console.log(newPassword);
    //make the request
-    newRequest.open('POST','http://rohitsinghcse.imad.hasura-app.io/register-user');
+    newRequest.open('POST','http://nishavelue.imad.hasura-app.io/register-user');
     newRequest.setRequestHeader('Content-Type','application/json');
     newRequest.send(JSON.stringify({uname:newUsername,passwd:newPassword}));
     
