@@ -287,7 +287,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/register.js',function(req,res){
+app.get('/ui/register.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','register.js'));
     
 });
