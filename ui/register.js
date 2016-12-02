@@ -1,12 +1,12 @@
 register.onclick = function () {
   var newRequest = new XMLHttpRequest();
   //capture the response and store it in a variable
-  newRequest.onreadystatechange =function () {
+  newRequest.onreadystatechange = function () {
     if(newRequest.readyState === XMLHttpRequest.DONE){
       if(newRequest.status === 200){
           alert('Registration successful');
       }
-      else if(newRequest.status ===500){
+      else if(newRequest.status === 500){
           alert('Something went wrong with the server');
         }
     }
