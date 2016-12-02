@@ -20,15 +20,6 @@ body {
     height: 200px;
 }
 
-#navmenu{
-  box-sizing: border-box;
-  height:auto;
-  display:block;
-  float:right;
-  width:auto;
-  margin-left:20px;
-  padding:0;
-}
 
 
   .container {
