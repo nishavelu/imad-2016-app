@@ -240,7 +240,7 @@ app.get('/counter', function (req, res)
     res.send(counter.toString());
 });
 
-app.get('/register.html', function (req, res) {
+app.get('/ui/register.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
