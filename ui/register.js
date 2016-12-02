@@ -1,5 +1,6 @@
 var register = document.getElementById('register_btn');
 register.onclick = function () {
+     alert('hello');
   var newRequest = new XMLHttpRequest();
   //capture the response and store it in a variable
   newRequest.onreadystatechange = function () {
