@@ -1,6 +1,5 @@
  alert('hello');
  var register = document.getElementById('register_btn');
-  alert(register.val);
 register.onclick = function () 
 {
      var newRequest = new XMLHttpRequest();
