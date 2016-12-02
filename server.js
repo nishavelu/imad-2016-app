@@ -109,13 +109,7 @@ var HTMLTemplate =`
 
 return HTMLTemplate;
 }
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
 
-app.get('/register.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'register.html'));
-});
 
 function hash(input,salt){
     //create a hash 
@@ -246,7 +240,13 @@ app.get('/counter', function (req, res)
     res.send(counter.toString());
 });
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
+app.get('/register.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'register.html'));
+});
 
 var names=[];
 app.get('/submit-name', function (req, res) {
