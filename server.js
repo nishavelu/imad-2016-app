@@ -129,7 +129,7 @@ app.post('/register-user',function(req,res){
  var passwd =req.body.passwd;
  var salt = crypto.randomBytes(128).toString('hex');
  var dbString = hash(passwd,salt);
- pool.query('INSERT INTO user (username,password) VALUES ($1,$2)',[uname,dbString],function(err,result){
+ pool.query('INSERT INTO user_testing (user_name,password) VALUES ($1,$2)',[uname,dbString],function(err,result){
   if(err){
     res.status(500).send(err.toString());
   }
@@ -166,7 +166,7 @@ app.post('/register-user',function(req,res){
 app.post('/login',function(req,res){
     var username = req.body.username; //Request body req.body
     var password = req.body.password;
-    pool.query('SELECT * FROM USER WHERE username = $1 ' ,[username],function(err,result){
+    pool.query('SELECT * FROM user_testing WHERE user_name = $1 ' ,[username],function(err,result){
       if(err){
           res.status(500).send(err.toString());
       } 
