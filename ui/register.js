@@ -1,17 +1,13 @@
- alert('hello');
- var register = document.getElementById('register_btn');
-register.onclick = function () 
-{
-     var newRequest = new XMLHttpRequest();
+var register = document.getElementById('register_btn');
+register.onclick = function () {
+  var newRequest = new XMLHttpRequest();
   //capture the response and store it in a variable
-  newRequest.onreadystatechange = function ()
-  {
-    if(newRequest.readyState === XMLHttpRequest.DONE)
-    {
+  newRequest.onreadystatechange =function () {
+    if(newRequest.readyState === XMLHttpRequest.DONE){
       if(newRequest.status === 200){
           alert('Registration successful');
       }
-      else if(newRequest.status === 500){
+      else if(newRequest.status ===500){
           alert('Something went wrong with the server');
         }
     }
@@ -23,9 +19,8 @@ register.onclick = function ()
   console.log(newUsername);
   console.log(newPassword);
    //make the request
-    newRequest.open('POST','http://nishavelue.imad.hasura-app.io/register-user');
+    newRequest.open('POST','http://nishavelu.imad.hasura-app.io/register-user');
     newRequest.setRequestHeader('Content-Type','application/json');
     newRequest.send(JSON.stringify({uname:newUsername,passwd:newPassword}));
     
 };
-
