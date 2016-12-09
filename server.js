@@ -360,7 +360,7 @@ app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
 
-app.get('/ui/image.jpg', function (req, res) {
+app.get('/ui/image1.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'image1.png'));
 });
 
