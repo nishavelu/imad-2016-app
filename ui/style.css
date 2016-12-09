@@ -1,7 +1,7 @@
 body {
    background-image: url('/ui/bg.jpg');
     font-family: sans-serif;
-    
+    background-repeat: no-repeat;
     margin-top: 60px;
 }
 
